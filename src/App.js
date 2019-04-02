@@ -18,8 +18,10 @@ class App extends Component {
     return (
       <div className="App">
         <header>
+        <span>this is a testing lab using enzyme</span>
           <h1>My E-Commerce Site</h1>
-          <ProductList products={TEST_DATA}  onProductBuy={() => testingFn()} />
+
+          <ProductList products={TEST_DATA}  onProductBuy={() => this.testingFn()} />
         </header>
       </div>
     );

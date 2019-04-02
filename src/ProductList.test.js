@@ -65,3 +65,11 @@ it('call 1 when btn is clicked', () =>{
     expect(testingFn.mock.calls[0][0]).toEqual(134);
 
 })
+
+it('matches our snapshot', () => {
+    const output = shallow(
+        <ProductList products={TEST_DATA} />
+    )
+    expect(output).toMatchSnapshot();
+  });
+  
