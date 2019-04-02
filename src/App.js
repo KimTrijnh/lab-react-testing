@@ -3,6 +3,9 @@ import './App.css';
 import ProductList from './ProductList'
 
 class App extends Component {
+  testingFn () {
+    console.log('click')
+  }
   render() {
     const TEST_DATA = [
       {id: 134, name: 'computer', price: 1000},
@@ -10,11 +13,13 @@ class App extends Component {
       {id: 553, name: 'computer stand', price: 20.99},
       {id: 689, name: 'mac adapter', price: 10000}
     ];
+
+   
     return (
       <div className="App">
         <header>
           <h1>My E-Commerce Site</h1>
-          <ProductList products={TEST_DATA} />
+          <ProductList products={TEST_DATA}  onProductBuy={() => testingFn()} />
         </header>
       </div>
     );
